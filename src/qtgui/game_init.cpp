@@ -27,19 +27,19 @@ int game_init(int argc, char *argv[])
 {
     create_apih_from_wrapper();
 
-	QApplication *app = new QApplication(argc, argv);
-	app->setStyle("windows");
-	app->setAttribute(Qt::AA_NativeWindows, true);
+    QApplication *app = new QApplication(argc, argv);
+    app->setStyle("windows");
+    app->setAttribute(Qt::AA_NativeWindows, true);
 
-	MainWindow * mainWin = new MainWindow();
+    MainWindow * mainWin = new MainWindow();
 
     mainWin->show();
-	int ret = app->exec();
+    int ret = app->exec();
 
     //Engine::set_game_window(mainWin);
 
     delete mainWin;
     delete app;
 
-	return ret;
+    return ret;
 }
